@@ -1,3 +1,4 @@
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');                 
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new StyleLintPlugin(),
     new ExtractTextPlugin('./style/style.css')                                         
   ],  
   resolve: {

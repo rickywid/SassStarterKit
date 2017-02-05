@@ -1,12 +1,8 @@
 .container {
 	background-color: red;
-}
+	color: green;
 
-.form-row {
-	display: flex;
+	h1 {
+		background-color: green;
+	}
 }
-
-.form-row input {
-	flex: 1;
-}
-
