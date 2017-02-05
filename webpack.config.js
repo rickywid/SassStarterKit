@@ -1,5 +1,6 @@
 var StyleLintPlugin = require('stylelint-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');                 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');     
+var Autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
@@ -14,7 +15,7 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style','css', 'sass')                       
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?importLoaders=1!postcss-loader!sass-loader')                       
       }
     ]
   },
@@ -28,5 +29,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  }
-};
+  },
+  postcss: () => {
+    return [
+      new Autoprefixer()
+  ];
+}
+}
