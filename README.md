@@ -1,5 +1,5 @@
-# React Sass Starter Kit
+# Sass Starter Kit
 
-Setup a new React project with Sass preprocessor compiled using webpack.
+Setup a new project with Sass preprocessor compiled using webpack. 
 
-###### Batteries not included
+###### Batteries(reactjs) not included
